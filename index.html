@@ -18,21 +18,24 @@
             </div>
             <div id="date-activity-form" style="display: none;">
                 <div id="calendar-container">
-                    <h2>Pick a day you're free 💗</h2>
-                    <h1>February</h1>
+                    <h1>Pick a day you're free 💗</h1>
+                    <h2>February</h2>
                     <div id="calendar"></div>
                 </div>
 
-                <h2>Choose an activity ☕🌸</h2>
-
-                <label><input type="checkbox" value="Beach"> Beach</label><br>
-                <label><input type="checkbox" value="Dinner"> Dinner</label><br>
-                <label><input type="checkbox" value="Picnic"> Picnic</label><br>
-                <label><input type="checkbox" value="Netflix + chill"> Netflix + chill</label><br>
-                <label><input type="checkbox" value="Sunset watching"> Sunset watching</label>
+                <h1>Choose an activity 🌸</h1>
+                
+                <button class="activity-btn" onclick="chooseActivity('Dinner', this)">🍽️ Dinner</button>
+                <button class="activity-btn" onclick="chooseActivity('Movie', this)">🎬 Movie</button>
+                <button class="activity-btn" onclick="chooseActivity('Picnic', this)">🧺 Picnic</button>
+                <button class="activity-btn" onclick="chooseActivity('Beach', this)">🏖️ Beach</button>
+                <button class="activity-btn" onclick="chooseActivity('Museum', this)">🏛️ Museum</button>
+                <button class="activity-btn" onclick="chooseActivity('Hiking', this)">🥾 Hiking</button>
+                <button class="activity-btn" onclick="chooseActivity('Sunset watching', this)">🌅 Sunset watching</button>
 
                 <br>
-                <button onclick="submitChoices()">Submit 💖</button>
+                <br>
+                <button onclick="saveResponse()">Submit 💖</button>
 
                 <p id="result" style="margin-top: 20px; font-size: 24px;"></p>
             </div>

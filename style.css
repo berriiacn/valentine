@@ -28,18 +28,26 @@ body {
     margin-top: 20px; /* Add space above the options */
 }
 
-button {
+button:not(.activity-btn) {
     padding: 10px 20px; /* Set padding for buttons */
     margin: 0 10px; /* Set margin around buttons */
     font-size: 26px; /* Set font size for buttons */
-    font-family: 'Sacramento', cursive; /* Apply Sacramento font to the options */
+    font-family: 'Source Sans Pro', sans-serif; /* Apply Source Sans Pro font to the options */
     background-color: #FB607F; /* Set button background color */
     color: white; /* Set text color to white */
     border: none; /* Remove button border */
     cursor: pointer; /* Set cursor to pointer on hover */
 }
 
-h2 {
+button:hover {
+    background-color: #ff7f9f; /* Change button color on hover */
+}
+
+button.selected {
+    background-color: #ff4c6d; /* Change button color when selected */
+}
+
+h1 {
     font-family: 'Sacramento', cursive;
 }
 
@@ -72,4 +80,18 @@ label {
 .day.selected {
   background: #fb607f;
   color: white;
+}
+
+.activity-btn {
+  background-color: #FB607F;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.activity-btn.selected {
+  background-color: #ff2e63 !important;
+  transform: scale(1.05);
 }

@@ -1,4 +1,6 @@
 // script.js
+let selectedDate = null;
+let selectedActivity = null;
 
 // Function to handle button click events
 function selectOption(option) {
@@ -91,6 +93,41 @@ function submitChoices() {
         "Yay! Can’t wait 💕";
 }
 
+function saveResponse() {
+    if (!selectedDate || !selectedActivity) {
+        alert("Pick a date and activity first 💗");
+        return;
+    }
+
+    const text = `
+    Valentine Response 💖
+    Date: ${selectedDate}
+    Activity: ${selectedActivity}
+    `;
+
+    const blob = new Blob([text], { type: "text/plain" });
+    const link = document.createElement("a");
+
+    link.href = URL.createObjectURL(blob);
+    link.download = "valentine-response.txt";
+    link.click();
+}
+
+
+function chooseActivity(activity, button) {
+  selectedActivity = activity;
+
+  console.log("Activity selected:", activity); // DEBUG
+
+  document.querySelectorAll(".activity-btn").forEach(btn => {
+    btn.classList.remove("selected");
+  });
+
+  button.classList.add("selected");
+}
+
+
+
 const calendar = document.getElementById("calendar");
 let selectedDay = null;
 
@@ -104,7 +141,9 @@ for (let i = 1; i <= 31; i++) {
     document.querySelectorAll(".day").forEach(d => d.classList.remove("selected"));
     day.classList.add("selected");
     selectedDay = i;
+    selectedDate = `February ${i}`;
   };
+
 
   calendar.appendChild(day);
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Will You Be My Valentine?</title>
+    <title>Cool Project</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap">
     <link rel="stylesheet" href="style.css"> <!-- Link to external stylesheet -->
 </head>
@@ -17,17 +17,19 @@
                 <button id="no-button" onclick="selectOption('no')">No</button> <!-- No button -->
             </div>
             <div id="date-activity-form" style="display: none;">
-                <h2>Pick a day you’re free 💕</h2>
-
-                <label><input type="checkbox" value="Friday"> Friday</label><br>
-                <label><input type="checkbox" value="Saturday"> Saturday</label><br>
-                <label><input type="checkbox" value="Sunday"> Sunday</label><br>
+                <div id="calendar-container">
+                    <h2>Pick a day you're free 💗</h2>
+                    <h1>February</h1>
+                    <div id="calendar"></div>
+                </div>
 
                 <h2>Choose an activity ☕🌸</h2>
 
-                <label><input type="checkbox" value="Coffee"> Coffee</label><br>
+                <label><input type="checkbox" value="Beach"> Beach</label><br>
                 <label><input type="checkbox" value="Dinner"> Dinner</label><br>
-                <label><input type="checkbox" value="Walk"> Walk</label><br>
+                <label><input type="checkbox" value="Picnic"> Picnic</label><br>
+                <label><input type="checkbox" value="Netflix + chill"> Netflix + chill</label><br>
+                <label><input type="checkbox" value="Sunset watching"> Sunset watching</label>
 
                 <br>
                 <button onclick="submitChoices()">Submit 💖</button>

@@ -91,5 +91,24 @@ function submitChoices() {
         "Yay! Can’t wait 💕";
 }
 
+const calendar = document.getElementById("calendar");
+let selectedDay = null;
+
+// Create simple calendar (1–31)
+for (let i = 1; i <= 31; i++) {
+  const day = document.createElement("div");
+  day.classList.add("day");
+  day.innerText = i;
+
+  day.onclick = () => {
+    document.querySelectorAll(".day").forEach(d => d.classList.remove("selected"));
+    day.classList.add("selected");
+    selectedDay = i;
+  };
+
+  calendar.appendChild(day);
+}
+
+
 // Display the cat.gif initially
 displayCat();

@@ -47,3 +47,29 @@ label {
     font-size: 22px;
     font-family: 'Sacramento', cursive;
 }
+
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  max-width: 350px;
+  margin: 20px auto;
+}
+
+.day {
+  padding: 12px;
+  background: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: 'Sacramento', cursive;
+  font-size: 22px;
+}
+
+.day:hover {
+  background: #ffb6c1;
+}
+
+.day.selected {
+  background: #fb607f;
+  color: white;
+}

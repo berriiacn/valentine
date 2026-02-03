@@ -94,24 +94,18 @@ function submitChoices() {
 }
 
 function saveResponse() {
-    if (!selectedDate || !selectedActivity) {
-        alert("Pick a date and activity first 💗");
-        return;
-    }
+  if (!selectedDate || !selectedActivity) {
+    alert("Pick a date and activity first 💗");
+    return;
+  }
 
-    const text = `
-    Valentine Response 💖
-    Date: ${selectedDate}
-    Activity: ${selectedActivity}
-    `;
+  const subject = "Valentine Response 💖";
+  const body = `Date: ${selectedDate}\nActivity: ${selectedActivity}`;
 
-    const blob = new Blob([text], { type: "text/plain" });
-    const link = document.createElement("a");
-
-    link.href = URL.createObjectURL(blob);
-    link.download = "valentine-response.txt";
-    link.click();
+  window.location.href =
+    `mailto:YOUR_EMAIL@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
+
 
 
 function chooseActivity(activity, button) {

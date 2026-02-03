@@ -38,3 +38,12 @@ button {
     border: none; /* Remove button border */
     cursor: pointer; /* Set cursor to pointer on hover */
 }
+
+h2 {
+    font-family: 'Sacramento', cursive;
+}
+
+label {
+    font-size: 22px;
+    font-family: 'Sacramento', cursive;
+}

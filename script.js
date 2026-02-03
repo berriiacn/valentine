@@ -73,7 +73,22 @@ function displayCatHeart() {
         imageContainer.appendChild(catHeartImage);
         // Hide the options container
         document.getElementById('options').style.display = 'none';
+        document.getElementById('date-activity-form').style.display = 'block';
     };
+}
+
+function submitChoices() {
+    const checkedDays = [...document.querySelectorAll('input[type="checkbox"]:checked')]
+        .map(input => input.value);
+
+    if (checkedDays.length === 0) {
+        document.getElementById('result').innerText =
+            "You have to pick at least one thing 😅";
+        return;
+    }
+
+    document.getElementById('result').innerText =
+        "Yay! Can’t wait 💕";
 }
 
 // Display the cat.gif initially
